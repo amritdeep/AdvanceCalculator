@@ -19,5 +19,10 @@ describe Calculator do
 		result = cal.calculate("1, 2, 3")
 		expect(result).to eq(6)
 	end
+
+	it "should returns sum of number containg more than 5 number" do
+		result = cal.calculate("1, 2, 3, 4, 5, 6, 7")
+		expect(result).to eq(28)
+	end
 	
 end
