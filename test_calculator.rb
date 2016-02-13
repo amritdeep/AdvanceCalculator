@@ -24,5 +24,16 @@ describe Calculator do
 		result = cal.calculate("1, 2, 3, 4, 5, 6, 7")
 		expect(result).to eq(28)
 	end
+
+	it "should check for operator like +" do
+		result = cal.check_operator("1 + 2")
+		expect(result).to eql(3)
+	end
+
+	it "should check for double operator like +, -" do
+		result = cal.calculate("5 + 2 - 1")
+
+		expect(result).to eql(6)
+	end
 	
 end
