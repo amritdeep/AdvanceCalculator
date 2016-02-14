@@ -1,0 +1,20 @@
+def check_operator(input)
+	new_array = []
+	array = input.split(' ')
+	array.each_index do |i|
+		## Calculation of add
+		a = array[i].to_i + array[i+2].to_i if array.include?('+')
+		a.to_s
+		new_array.push(a)
+
+		## Delete used value
+		del_list = [array[i], array[i+1], array[i+2]]
+		del_list.each do |del|
+			array.delete_at(array.index(del))
+		end
+
+		array.unshift(new_array[0])
+
+	end
+
+end
