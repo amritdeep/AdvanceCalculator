@@ -44,6 +44,9 @@ class Calculator
 
 		elsif array.count < 3	
 			puts "Check you number and Operator" if array.include?('+')
+			puts "Check you number and Operator" if array.include?('-')
+			puts "Check you number and Operator" if array.include?('*')
+			puts "Check you number and Operator" if array.include?('/')
 		else
 			input.to_i
 		end	
