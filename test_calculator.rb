@@ -17,64 +17,53 @@ describe Calculator do
 
 	# Handle Post operator
 	it "should returns error for 1 + " do
-		result = cal.check_multiple_operator("1 +")
+		result = cal.calculate("1 +")
 		expect(result).to eql(nil)
 		expect { print('Check you number and Operator').to output.to_stdout }
 	end
 
 	it "should returns error for 1 + " do
-		result = cal.check_multiple_operator("1 -")
+		result = cal.calculate("1 -")
 		expect(result).to eql(nil)
 		expect { print('Check you number and Operator').to output.to_stdout }
 	end
 	
 	it "should returns error for 1 + " do
-		result = cal.check_multiple_operator("1 *")
+		result = cal.calculate("1 *")
 		expect(result).to eql(nil)
 		expect { print('Check you number and Operator').to output.to_stdout }
 	end		
 
 	it "should returns error for 1 + " do
-		result = cal.check_multiple_operator("1 /")
+		result = cal.calculate("1 /")
 		expect(result).to eql(nil)
 		expect { print('Check you number and Operator').to output.to_stdout }
 	end
 
 	# Handle pre operator
 	it "should returns error for + 1 " do
-		result = cal.check_multiple_operator("+ 1")
+		result = cal.calculate("+ 1")
 		expect(result).to eql(nil)
 		expect { print('Check you number and Operator').to output.to_stdout }
 	end	
 
 	it "should returns error for - 1" do
-		result = cal.check_multiple_operator("- 1")
+		result = cal.calculate("- 1")
 		expect(result).to eql(nil)
 		expect { print('Check you number and Operator').to output.to_stdout }
 	end
 
 	it "should returns error for * 1" do
-		result = cal.check_multiple_operator("* 1")
+		result = cal.calculate("* 1")
 		expect(result).to eql(nil)
 		expect { print('Check you number and Operator').to output.to_stdout }
 	end
 
 	it "should returns error for / 1" do
-		result = cal.check_multiple_operator("/ 1")
+		result = cal.calculate("/ 1")
 		expect(result).to eql(nil)
 		expect { print('Check you number and Operator').to output.to_stdout }
 	end
-
-
-	# it "should returns sum of number containg '1, 2, 3'" do
-	# 	result = cal.calculate("1, 2, 3")
-	# 	expect(result).to eq(6)
-	# end
-
-	# it "should returns sum of number containg more than 5 number" do
-	# 	result = cal.calculate("1, 2, 3, 4, 5, 6, 7")
-	# 	expect(result).to eq(28)
-	# end
 
 	it "should check for operator like +" do
 		# result = cal.check_operator("1 + 2")
