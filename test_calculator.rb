@@ -46,10 +46,32 @@ describe Calculator do
 		expect(result).to eql(-4)
 	end
 
+	it "should multiple two number like 2 * 2" do
+		result = cal.check_multiple_operator("2 * 2")
+		expect(result).to eql(4)
+	end
+
+	it "should divide two number like 9 / 3 " do
+		result = cal.check_multiple_operator("9 / 3")
+		expect(result).to eql(3)
+	end
+
 	it "should check for double operator like +, -" do
 		# result = cal.calculate("5 + 2 - 1")
 		result = cal.check_multiple_operator("5 + 2 - 1")
 		expect(result).to eql(6)
 	end
+
+	it "should check for double operator like *, -" do
+		result = cal.check_multiple_operator("5 * 2 - 4")
+		expect(result).to eql(6)
+	end
+
+	it "should check for double operator like /, +" do
+		result = cal.check_multiple_operator("8 / 2 + 3")
+		expect(result).to eql(7)
+	end
+
+
 	
 end

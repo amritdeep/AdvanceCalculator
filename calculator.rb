@@ -23,6 +23,8 @@ class Calculator
 				del_list = [array[0], array[1], array[2]]
 				a = del_list[0].to_i + del_list[2].to_i if del_list.include?('+')
 				a = del_list[0].to_i - del_list[2].to_i if del_list.include?('-')
+				a = del_list[0].to_i * del_list[2].to_i if del_list.include?('*')
+				a = del_list[0].to_i / del_list[2].to_i if del_list.include?('/')
 				a = a.to_s
 				new_array.push(a)
 
