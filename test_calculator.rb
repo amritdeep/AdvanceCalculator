@@ -1,6 +1,5 @@
 require_relative 'calculator'
 require 'rspec'
-require 'pry'
 
 describe Calculator do
 	let(:cal) { Calculator.new }
@@ -111,7 +110,5 @@ describe Calculator do
 		result = cal.calculate("8 / 2 + 3")
 		expect(result).to eql(7)
 	end
-
-
 	
 end
