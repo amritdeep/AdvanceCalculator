@@ -15,6 +15,7 @@ describe Calculator do
 		expect(result).to eq(1)
 	end
 
+	# Handle Post operator
 	it "should returns error for 1 + " do
 		result = cal.check_multiple_operator("1 +")
 		expect(result).to eql(nil)
@@ -34,6 +35,15 @@ describe Calculator do
 		result = cal.check_multiple_operator("1 /")
 		expect(result).to eql(nil)
 	end
+
+	# Handle pre operator
+	it "should returns error for 1 + " do
+		result = cal.check_multiple_operator("+ 1")
+		expect(result).to eql(nil)
+		expect { print('Check you number and Operator').to output.to_stdout }
+	end	
+
+
 	# it "should returns sum of number containg '1, 2, 3'" do
 	# 	result = cal.calculate("1, 2, 3")
 	# 	expect(result).to eq(6)
