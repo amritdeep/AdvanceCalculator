@@ -15,6 +15,11 @@ describe Calculator do
 		expect(result).to eq(1)
 	end
 
+	it "should returns error for 1 + " do
+		result = cal.check_multiple_operator("1 +")
+		expect(result).to eql(nil)
+	end
+
 	# it "should returns sum of number containg '1, 2, 3'" do
 	# 	result = cal.calculate("1, 2, 3")
 	# 	expect(result).to eq(6)
