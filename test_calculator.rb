@@ -1,6 +1,5 @@
 require_relative 'calculator'
 require 'rspec'
-require 'pry'
 
 describe Calculator do
 	let(:cal) { Calculator.new }

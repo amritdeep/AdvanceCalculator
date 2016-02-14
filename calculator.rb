@@ -1,5 +1,3 @@
-require 'pry'
-
 class Calculator
 
 	def calculate(input)
@@ -50,15 +48,5 @@ class Calculator
 	def calculate_sum(number)
 		number.inject { |sum, n| sum + n }
 	end
-
-	# def check_operator(input)
-	# 	binding.pry
-	# 	if input.include?('+')
-	# 		string = input.split('+')
-	# 		number = string.map { |x| x.to_i }	
-	# 		number.inject { |sum, n| sum + n }
-	# 	end
-		
-	# end
 
 end
