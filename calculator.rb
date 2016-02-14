@@ -1,18 +1,26 @@
+require 'pry'
+
 class Calculator
 
 	def calculate(input)
-		# check_operator(input)
-		if input.include?(',')
-			# string = input.split(',')
-			# number = string.map { |x| x.to_i }
-			number = convert_string_to_integers(input)
-			calculate_sum(number)
-		else
-			input.to_i
-		end
+		check_operator(input)
 	end
 
-	def check_multiple_operator(input)
+	# def calculate(input)
+	# 	# check_operator(input)
+	# 	if input.include?(',')
+	# 		# string = input.split(',')
+	# 		# number = string.map { |x| x.to_i }
+	# 		number = convert_string_to_integers(input)
+	# 		calculate_sum(number)
+	# 	else
+	# 		input.to_i
+	# 	end
+	# end
+
+	private
+
+	def check_operator(input)
 		new_array = []
 		array = input.split(' ')
 		if array.count >= 3
@@ -34,11 +42,12 @@ class Calculator
 				del_list.clear
 				new_array.clear
 			end
-			array.first.to_i	
+			array.first.to_i
+		else
+			input.to_i
 		end	
-	end
 
-	private
+	end
 
 	def convert_string_to_integers(input)
 		string = input.split(',')
